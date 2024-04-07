@@ -1,3 +1,5 @@
+import os
+
 from website import create_app
 
 from flask import Flask, render_template
@@ -37,4 +39,4 @@ def handle_page_change(data):
 
 
 if __name__ == '__main__':
-    socketio.run(app, allow_unsafe_werkzeug=True)
+    socketio.run(app,host="0.0.0.0", port=os.getenv("PORT", default=5000), allow_unsafe_werkzeug=True)
