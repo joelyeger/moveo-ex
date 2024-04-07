@@ -2,7 +2,6 @@ import os
 
 from website import create_app
 
-from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 
 app = create_app()
